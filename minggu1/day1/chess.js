@@ -1,4 +1,3 @@
-<script>
 let panjang = 8;
 let board = "";
 
@@ -15,4 +14,3 @@ for (let y = 0; y < panjang; y++) {
 
 console.log(board);
 
-</script>
