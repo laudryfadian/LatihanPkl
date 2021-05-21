@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
 class Family {
   constructor(nama, lahir) {
     this.name = nama;
@@ -23,6 +13,4 @@ let year = date.getFullYear();
 
 let myFam = new Family("Paijo", 2010);
 document.write("Adikku berumur " + myFam.age(year) + " tahun.");
-    </script>
-</body>
-</html>
+
