@@ -1,0 +1,23 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  div.container
+    a.navbar-brand(href='/') Ini Navbar
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='/tes') Kalkulator
+        li.nav-item
+          a.nav-link(href='/bergelut') MVC
+        li.nav-item
+          a.nav-link(href='/kalkulator2') Kalkulator 2.0
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Dropdown link
+          ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            li
+              a.dropdown-item(href='#') Action
+            li
+              a.dropdown-item(href='#') Another action
+            li
+              a.dropdown-item(href='#') Something else here

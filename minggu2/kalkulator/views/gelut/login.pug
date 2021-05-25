@@ -1,0 +1,13 @@
+extends ../layout
+block content
+ .container.mt-5
+  .form-group.row
+    label.col-sm-2.col-form-label(for='staticEmail') Email
+    .col-sm-5
+      input#staticEmail.form-control(type='text' value='email@example.com')
+  .form-group.row.mt-2
+    label.col-sm-2.col-form-label(for='inputPassword') Password
+    .col-sm-5
+      input#inputPassword.form-control(type='password' placeholder='Password')
+  a.btn.btn-dark.mt-2(href='/bergelut/login') LOGIN
+

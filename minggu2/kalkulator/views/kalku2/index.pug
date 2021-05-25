@@ -1,0 +1,31 @@
+extends ../layout
+block content
+ div.container
+   h1(style='text-align:center; margin-top:10px') Kalkulator
+   div(align='center')
+    form(name='calculator' action="/hitung" method='get')
+      table.tabel(style='background-color: ')
+        tbody
+          tr
+            td Angka 1
+            td :
+            td 
+              input(type='number' name='angka1' id="angka1")
+          tr
+            td Angka 2
+            td :
+            td 
+              input(type='number' name='angka2' id="angka2")
+          tr
+            td Hasil
+            td :
+            td
+              input(type='number' name='hasil' id="hasil" readonly)
+          tr
+            td(colspan='3' align='right')
+              select(id="operator")
+                option(value="tambah") +
+                option(value="kurang") -
+                option(value="bagi") /
+                option(value="kali") *
+              button(type="submit") Hitung      

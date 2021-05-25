@@ -1,0 +1,21 @@
+extends layout
+block content
+ div.container
+   h1(style='text-align:center; margin-top:10px') Kalkulator
+   div(align='center')
+    form(name='calculator')
+      table.tabel(style='background-color: ')
+        tbody
+          tr
+            td Angka 1
+            td :
+            td
+              input(type='number' name='angka1')
+          tr
+            td Hasil
+            td :
+            td
+              input(type='text' name='hasil' readonly)
+          tr
+            td(colspan='3' align='right')
+              input.tombol(type='button' onclick='ganjilgenap()' value='  CEK  ')
