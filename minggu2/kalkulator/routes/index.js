@@ -72,7 +72,20 @@ router.get('/:operator/:num1/:num2', function(req,res){
 	}
 
 	res.json(result);
+	
 });
+
+router.get('/status',
+  (req, res, next) => {
+    return next(new Error('Contoh Error'));
+    res.json({
+      status: true,
+      code: 200,
+      message: 'Status OK. Running...',
+      data: {},
+    })
+  }
+)
 
 
 
