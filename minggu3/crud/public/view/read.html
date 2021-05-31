@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Read Database</title>
+	<link rel="stylesheet" type="text/css" href="../asset/css/css.css">
+</head>
+<body>
+<div class="konten d-flex">
+	<div class="card m-auto w-40">
+		<div class="p-2">
+			<h1 class="m-0">Daftar Akun</h1>
+		</div>
+		<div class="p-2">
+			<table class="tg" style="width: 100%;">
+				<thead>
+					<tr>
+						<td>No.</td>
+						<td>Nama</td>
+						<td>Username</td>
+						<td>Aksi</td>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+					no = 0;
+					for(var i=0;i<data.length;i++){
+					no++;
+					%>
+					<tr>
+						<td><%=no%></td>
+						<td><%=data[i].nama_lengkap%></td>
+						<td><%=data[i].username%></td>
+						<td>
+							<div class="w-100 d-flex">
+								<button class="m-auto btn btn-success"><a href="/update?i=<%=data[i].id_akun%>">Edit</a></button>
+								<button onclick="hapus('<%=data[i].id_akun%>');" class="m-auto btn btn-danger" >Hapus</button>
+			
+							</div>
+					</td>
+					</tr>
+					<%}%>
+				</tbody>
+			</table>
+		</div>
+		<div class="p-2">
+			<button class="btn btn-primary"><a href="/insert">Tambah Akun</a></button>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function hapus(i) {
+		if (confirm("Hapus akun ini ?")) {
+			window.location.href ="/hapus_akun?i="+i;
+		}
+	}
+
+</script>
+</body>
+</html>
